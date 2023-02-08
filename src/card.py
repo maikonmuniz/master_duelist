@@ -2,12 +2,13 @@
 
 class Card:
 
-    def __init__(self, nome, ataque, defesa):
-        self.__nome      = nome
-        self.__ataque    = ataque
-        self.__defesa    = defesa
-        self.modo_ataque = modo_ataque
-        self.modo_defesa = modo_defesa
+    def __init__(self, nome, ataque, defesa, imagem_card):
+        self.nome        = nome
+        self.ataque      = ataque
+        self.defesa      = defesa
+        self.modo_ataque = False
+        self.modo_defesa = False
+        self.imagem_card = imagem_card
     
     def modo_ataque(self):
         
@@ -20,3 +21,5 @@ class Card:
         if self.mode_ataque:
             self.modo_defesa = True
             self.modo_ataque = False
+            
+    

@@ -1,6 +1,6 @@
 import pygame
+from card import Card
 
-print("Ola mundo")
 
 pygame.init()
 
@@ -16,8 +16,12 @@ FPS = 40
 fundo         = pygame.image.load("imagens/fundo.png")
 fundo_desenho = pygame.image.load("imagens/img_inicio.jpg")
 
-
 rodano = True
+
+exodia = Card("Teste monstro de duelos", 123123, 123123, "imagens/cards/cabeca_exodia.png")
+exodia_img = exodia.imagem_card
+
+exodia_img = pygame.image.load(exodia_img)
 
 while rodano:
     pygame.transform.scale(fundo, (0, 0))
@@ -27,7 +31,7 @@ while rodano:
 
     # tela.blit(fundo_desenho, (0, 40))
     tela.blit(fundo, (30, 15))
-
+    tela.blit(exodia_img, (45, 50))
     pygame.display.update()
 
 pygame.quit()
